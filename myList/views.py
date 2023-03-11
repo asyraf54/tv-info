@@ -23,7 +23,7 @@ def show_list(request):
         show = Show(title=deserialize['title'],synopsis=deserialize['synopsis'], time_publish=deserialize['time_publish'],
                     genre=deserialize['genre'],poster_url=deserialize['poster_url'], trailer_url=deserialize['trailer_url'])
         show.save()
-        return JsonResponse({'message': 'Group created successfully'}, status=status.HTTP_201_CREATED)
+        return JsonResponse({'message': 'show created successfully'}, status=status.HTTP_201_CREATED)
     
 
 @csrf_exempt
@@ -35,5 +35,5 @@ def show_detail(request, pk):
     
     elif request.method == 'DELETE':
         show.delete()
-        data = {'message': 'Post deleted successfully!'}
+        data = {'message': 'show deleted successfully!'}
         return JsonResponse(data)
