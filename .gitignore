@@ -23,7 +23,7 @@ media/
 # Secret key
 *.secret_key
 *.env
-
+env
 # Django generated files
 *.DS_Store
 *.cache
